@@ -13,6 +13,7 @@ int main()
         if (num % i == 0)
         {
             flag = 0;
+            break;
         }
     }
     if (flag == 0)
