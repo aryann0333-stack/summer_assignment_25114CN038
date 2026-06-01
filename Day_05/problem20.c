@@ -13,7 +13,7 @@ int main()
         if (num % i == 0)
         {
             prime = 1;
-            for (j = 2; j < i / 2; j++)
+            for (j = 2; j <= i / 2; j++)
             {
                 if (i % j == 0)
                 {
