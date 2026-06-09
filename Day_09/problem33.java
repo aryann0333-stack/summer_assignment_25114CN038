@@ -1,0 +1,27 @@
+
+// inverted pyramid patttern printing
+
+import java.util.Scanner;
+
+public class problem33 {
+    public static void main(String[] args) {
+
+        try (Scanner sc = new Scanner(System.in)) {
+
+            System.out.print("Enter length of pyramid: ");
+            int leng = sc.nextInt();
+
+            // outer loop
+
+            for (int i = leng; i >= 1; i--) {
+
+                // inner loop for printing
+
+                for (int j = 1; j <= i; j++) {
+                    System.out.print("*");
+                }
+                System.out.println();
+            }
+        }
+    }
+}
