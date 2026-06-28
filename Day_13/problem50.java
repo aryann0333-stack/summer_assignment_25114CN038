@@ -1,26 +1,37 @@
+
+//  program to Find sum and average of array
 import java.util.Scanner;
 
 public class problem50 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
 
-        System.out.print("Enter size of array: ");
-        int n = sc.nextInt();
+            // size declarration
+            System.out.print("Enter size of Array: ");
+            int term = sc.nextInt();
 
-        int[] arr = new int[n];
-        int sum = 0;
+            int[] arr = new int[term];
 
-        System.out.println("Enter array elements:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-            sum = sum + arr[i];
+            // input array
+            for (int i = 0; i < term; i++) {
+                System.out.print("Enter element " + (i + 1) + ": ");
+                arr[i] = sc.nextInt();
+            }
+
+            // sum of array
+            int sum = 0;
+            for (int i = 0; i < term; i++) {
+                sum += arr[i];
+            }
+
+            // average of array
+            double avg = (double) sum / term;
+
+            // printing values
+            System.out.println("sum of array: " + sum);
+            System.out.printf("Average of array: %.2f%n", avg);
+
         }
 
-        double average = (double) sum / n;
-
-        System.out.println("Sum = " + sum);
-        System.out.println("Average = " + average);
-
-        sc.close();
     }
 }
