@@ -1,36 +1,41 @@
+
+// a program to Find largest and smallest element
 import java.util.Scanner;
 
 public class problem51 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
 
-        System.out.print("Enter size of array: ");
-        int n = sc.nextInt();
+            // declaring size of array
+            System.out.print("Enter size of array: ");
+            int size = sc.nextInt();
 
-        int[] arr = new int[n];
+            int[] arr = new int[size];
 
-        System.out.println("Enter array elements:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        int largest = arr[0];
-        int smallest = arr[0];
-
-        for (int i = 1; i < n; i++) {
-
-            if (arr[i] > largest) {
-                largest = arr[i];
+            // input of array
+            for (int i = 0; i < size; i++) {
+                System.out.print("Enter element " + (i + 1) + ": ");
+                arr[i] = sc.nextInt();
             }
 
-            if (arr[i] < smallest) {
-                smallest = arr[i];
+            int largest = arr[0];
+            // for largest element
+            for (int i = 1; i < size; i++) {
+                if (largest < arr[i]) {
+                    largest = arr[i];
+                }
             }
+            System.out.println("Largest element: " + largest);
+
+            // for smallest element
+            int smallest = arr[0];
+            for (int i = 1; i < size; i++) {
+                if (smallest > arr[i]) {
+                    smallest = arr[i];
+                }
+            }
+            System.out.println("Smallest element: " + smallest);
         }
 
-        System.out.println("Largest element = " + largest);
-        System.out.println("Smallest element = " + smallest);
-
-        sc.close();
     }
 }
