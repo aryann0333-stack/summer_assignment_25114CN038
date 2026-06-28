@@ -2,25 +2,25 @@ import java.util.Scanner;
 
 public class problem49 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter size of array: ");
-        int n = sc.nextInt();
+        try (Scanner sc = new Scanner(System.in)) {
 
-        int[] arr = new int[n];
+            System.out.print("Enter size of array: ");
+            int n = sc.nextInt();
 
-        // Input
-        System.out.print("Enter array elements:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+            int arr[] = new int[n];
+
+            // Input
+            System.out.print("Enter array elements: ");
+            for (int i = 0; i < n; i++) {
+                arr[i] = sc.nextInt();
+            }
+
+            // display
+            System.out.print("Enterd values are: ");
+            for (int i = 0; i < n; i++) {
+                System.out.print(arr[i] + " ");
+            }
         }
-
-        // Display
-        System.out.println("Array elements are:");
-        for (int i = 0; i < n; i++) {
-            System.out.print(arr[i] + " ");
-        }
-
-        sc.close();
     }
 }
