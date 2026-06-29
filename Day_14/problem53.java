@@ -19,7 +19,7 @@ public class problem53 {
                 arr[i] = sc.nextInt();
             }
 
-            // targeted index
+            // targeted value
             System.out.print("Enter element to be found: ");
             int targ = sc.nextInt();
 
