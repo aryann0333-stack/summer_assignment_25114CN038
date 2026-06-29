@@ -29,6 +29,7 @@ public class problem54 {
             for (int i = 0; i < arr.length; i++) {
                 if (target == arr[i]) {
                     frequency++;
+                    break;
                 }
             }
             System.out.println("Enterd element frequency is " + frequency);
